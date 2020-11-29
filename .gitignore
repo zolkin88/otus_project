@@ -1,0 +1,7 @@
+.idea/
+page_objects/__pytest_cache__/
+tests/__pytest_cache__/
+tests/geckodriver.log
+.geckodriver.log
+
+
