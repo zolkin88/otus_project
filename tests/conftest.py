@@ -27,13 +27,13 @@ def browser(request, get_base_url, get_path):
     if "chrome" == request.config.getoption("--browser"):
         chrome_options = ChromeOptions()
         chrome_options.headless = False
-        driver = webdriver.Chrome(executable_path='/var/lib/jenkins/workspace/test_otus/last_work/tests/chromedriver',
+        driver = webdriver.Chrome(executable_path='/var/lib/jenkins/workspace/test_otus/tests/chromedriver',
                                   options=chrome_options)
         driver.maximize_window()
     if "firefox" == request.config.getoption("--browser"):
         firefox_options = FirefoxOptions()
         firefox_options.headless = True
-        driver = webdriver.Firefox(executable_path='/var/lib/jenkins/workspace/test_otus/last_work/tests/geckodriver',
+        driver = webdriver.Firefox(executable_path='/var/lib/jenkins/workspace/test_otus/tests/geckodriver',
                                    options=firefox_options)
         driver.maximize_window()
     if "firefox" == request.config.getoption("--browser") and "Yes" == request.config.getoption("--selenoid"):
